@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onclick="startTime()">
     <div id="text">hello from the otherside</div>
     <h1>this is the first tag</h1>
     <h1>this is the second tag</h1>
@@ -22,8 +22,10 @@
     <button class="button" onclick="flexChange()">flexChange</button>
     <p class="textChange">Hello world</p>
     <button class="button " onclick="textChange()">textChange</button>
-    <br><span id="MyClockDisplay"></span><br>
-
+<br> <div id="nhours"></div>
+                        <div id="nmin"></div>
+                        <div id="nsec"></div>
+                        <div id="am_pm"></div>
 
 <select name="year" id="year">
     <option value="20-21">20-21</option>
