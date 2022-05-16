@@ -83,7 +83,7 @@ function form1(){
     var phoneNo = document.createElement("input");
     phoneNo.setAttribute("type","tel");
     phoneNo.setAttribute("name","phoneNo");
-    phoneNo.setAttribute("placeholder","91-87952636");
+    phoneNo.setAttribute("placeholder","+91");
     phoneNo.setAttribute("pattern","[91]{2}[0-9]{10}");
     // phoneNo.setAttribute("required");
 
