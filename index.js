@@ -47,11 +47,7 @@ function startTime() {
     m = checkTime(m);
     s = checkTime(s);
 
-    document.getElementById("nhours").innerHTML =  h +"<br>Hours";
-    document.getElementById("nmin").innerHTML =   m + "<br>Min"; 
-    document.getElementById("nsec").innerHTML =   s + "<br>Secs";
-    document.getElementById("am_pm").innerHTML = am_pm;
- 
+    document.getElementById("time").innerHTML =  h +":"+ m + ":" + s + am_pm;
     setTimeout(startTime, 1000);
   }
   
