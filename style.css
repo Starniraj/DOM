@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+}
+
+.container > div{
+    padding: 15px;
+    margin: 10px;
+    background-color: brown;
+
+}
