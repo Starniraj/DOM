@@ -37,22 +37,29 @@ function textChange(){
     const element7 = document.getElementsByClassName("textChange");
     element7[0].innerText = "Welcome to Elevation academy";
 }
-function showTime(){
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
-    var session = "AM";
-    
-    var time = h + ":" + m + ":" + s + " ";
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
-    
-    setTimeout(showTime, 1000);
-    
-}
+function startTime() {
+    const today = new Date();
+    let h = today.getHours()> 12 ? today.getHours() - 12 : today.getHours();
+    var am_pm = today.getHours() >= 12 ? "PM" : "AM";
+    h = h < 10 ? "0" + h : h;
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
 
-showTime();
+    document.getElementById("nhours").innerHTML =  h +"<br>Hours";
+    document.getElementById("nmin").innerHTML =   m + "<br>Min"; 
+    document.getElementById("nsec").innerHTML =   s + "<br>Secs";
+    document.getElementById("am_pm").innerHTML = am_pm;
+ 
+    setTimeout(startTime, 1000);
+  }
+  
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
+
 
 
 8. // Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected
